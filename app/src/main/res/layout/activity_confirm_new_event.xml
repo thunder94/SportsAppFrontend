@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/activity_confirm_event_map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+    <ScrollView
+        android:id="@+id/confirm_event_scrollVie"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/activity_confirm_event_organizer_avatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@mipmap/no_image"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#fff"
+                    android:onClick="onClickedOrganizer" />
+
+                <!--
+                <ImageView
+                    android:id="@+id/activity_confirm_event_organizer_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    app:srcCompat="@android:drawable/btn_star" />
+                -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp" >
+
+                    <TextView
+                        android:id="@+id/activity_confirm_event_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        style="@style/categoryText" />
+
+                    <TextView
+                        android:id="@+id/activity_confirm_event_date_and_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date and time"
+                        style="@style/DateAndTimeText"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_confirm_event_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"/>
+
+            <Button
+                android:id="@+id/confirm_new_event_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="@string/create_an_event"
+                android:onClick="onClickButtonCreateEvent"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/confirm_event_scrollVie"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.hfad.sportsapp.NewEventActivity"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/activity_confirm_event_map"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            style="@style/new_event_title"
+            android:text="@string/describe_event" />
+
+        <EditText
+            android:id="@+id/new_event_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="top|left"
+            android:minLines="6"
+            android:hint="@string/hintNewEventDescription"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            style="@style/new_event_title"
+            android:text="@string/choose_category" />
+
+        <RadioGroup
+            android:id="@+id/new_event_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="15dp" >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sc_air_sports"
+                android:text="@string/sc_air_sports"
+                android:tag="0" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sc_rchery"
+                android:text="@string/sc_archery"
+                android:tag="1"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sc_ball_over_net_games"
+                android:text="@string/sc_ball_over_net_games"
+                android:tag="2"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            style="@style/new_event_title"
+            android:text="@string/time_and_date" />
+
+        <TimePicker
+            android:id="@+id/new_event_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <DatePicker
+            android:id="@+id/new_event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/create_an_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="7dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/see_how_it_will_look_like"
+            android:onClick="onClickButtonToSeeHowItLookLike" />
+    </LinearLayout>
+
+</ScrollView>

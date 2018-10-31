@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hfad.sportsapp.SettingsActivity"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        style="@style/new_event_title"
+        android:text="@string/choose_category_to_see_on_map" />
+
+    <CheckBox
+        android:id="@+id/checkbox_ball_over_net_games"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Ball-over-net games"
+        android:onClick="onCheckboxClicked"
+        tools:ignore="OnClick" />
+
+    <CheckBox
+        android:id="@+id/checkbox_football"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Football"
+        android:onClick="onCheckboxClicked"
+        tools:ignore="OnClick" />
+
+    <CheckBox
+        android:id="@+id/checkbox_all_the_rest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="All the rest"
+        android:onClick="onCheckboxClicked"
+        tools:ignore="OnClick" />
+
+</LinearLayout>
